@@ -1,9 +1,9 @@
 # Ex. No: 5 Creating Triggers using PL/SQL
-
-### AIM:
+## DATE: 1.9.23
+## AIM:
 To create a Trigger using PL/SQL.
 
-### Steps:
+## Steps:
 1. Create employee table with following attributes (empid NUMBER, empname VARCHAR(10), dept VARCHAR(10),salary NUMBER);
 2. Create salary_log table with following attributes (log_id NUMBER GENERATED ALWAYS AS IDENTITY, empid NUMBER,empname VARCHAR(10),old_salary NUMBER,new_salary NUMBER,update_date DATE);
 3. Create a trigger named as log_salary-update.
@@ -13,7 +13,7 @@ To create a Trigger using PL/SQL.
 7. Whenever a salary is updated for the employee it must be logged into the salary_log table with old salary and new salary.
 8. Display the employee table, salary_log table.
 
-### Program:
+## Program:
 ```
 CREATE TABLE employe(
   empid NUMBER,
@@ -34,12 +34,12 @@ CREATE TABLE salary_log (
 insert into employe values(1,'Kar','IT',1000000);
 insert into employe values(2,'Boha','SALES',500000)
 ```
-### Create employee table
+## Create employee table
 ![image](https://github.com/Brindha77/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/118889143/3f321740-7209-4fa9-bb97-c8d1f861d5aa)
-### Create salary_log table
+## Create salary_log table
 ![image](https://github.com/Brindha77/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/118889143/3ce554ad-7f85-4590-8112-0ff4d5f1e974)
 
-### PLSQL Trigger code
+## PLSQL Trigger code
 ```
 -- Create the trigger
 CREATE OR REPLACE TRIGGER log_sal_update
@@ -66,7 +66,7 @@ SELECT * FROM employe;
 -- Display the salary_log table
 SELECT * FROM sal_log;
 ```
-### Output:
+## Output:
 ![db ex 5](https://github.com/Brindha77/Ex-No-5-Creating-Triggers-using-PL-SQL/assets/118889143/40b9a2ab-e8d1-4712-8a18-786ac0bf690e)
-### Result:
+## Result:
 Thus the program implemented successfully.
